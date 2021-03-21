@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!--===== TOOLS FOR THE TOOL GOD =====-->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+				    /Defs/ThingDef[
+					defName = "GN_KVector_1G" or
+					defName = "GN_KVector_2G" or											
+					defName = "GN_KVector_3G"]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!--===== GN_KVector_1G =====-->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_KVector_1G</defName>
+                    <statBases>
+                        <WorkToMake>30500</WorkToMake>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.16</ShotSpread>
+                        <SwayFactor>0.89</SwayFactor>
+                        <Bulk>4.10</Bulk>
+                        <Mass>2.70</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                        <Chemfuel>10</Chemfuel>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                        <warmupTime>0.5</warmupTime>
+                        <range>35</range>
+                        <soundCast>GN_Shot_KRISSVector_1G</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>1.84</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                </li>
+
+                <!--===== GN_KVector_2G =====-->
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_KVector_2G</defName>
+                    <statBases>
+                        <WorkToMake>30700</WorkToMake>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <ShotSpread>0.13</ShotSpread>
+                        <SwayFactor>0.80</SwayFactor>
+                        <Bulk>4.20</Bulk>
+                        <Mass>3.00</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>35</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                        <Chemfuel>15</Chemfuel>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                        <burstShotCount>7</burstShotCount>
+                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                        <warmupTime>0.5</warmupTime>
+                        <range>35</range>
+                        <soundCast>GN_Shot_KRISSVector_2G</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>1.6</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>40</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                </li>
+
+                <!--===== GN_KVector_3G =====-->
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_KVector_3G</defName>
+                    <statBases>
+                        <WorkToMake>30900</WorkToMake>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <ShotSpread>0.13</ShotSpread>
+                        <SwayFactor>0.80</SwayFactor>
+                        <Bulk>4.20</Bulk>
+                        <Mass>3.00</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>55</Steel>
+                        <Plasteel>25</Plasteel>
+                        <Chemfuel>15</Chemfuel>
+                        <ComponentIndustrial>10</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_6x18mmCharged</defaultProjectile>
+                        <burstShotCount>7</burstShotCount>
+                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                        <warmupTime>0.5</warmupTime>
+                        <range>35</range>
+                        <soundCast>GN_Shot_KRISSVector_3G</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>1.4</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>60</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_6x18mmCharged</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SpacerGun</li>
+                    </weaponTags>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>
