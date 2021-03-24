@@ -12,7 +12,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>11</damageAmountBase>
+      <damageAmountBase>10</damageAmountBase>
       <speed>65</speed>
     </projectile>
   </ThingDef>
@@ -30,21 +30,21 @@
     <recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
     <statBases>
       <WorkToMake>11000</WorkToMake>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.35</AccuracyMedium>
-      <AccuracyLong>0.15</AccuracyLong>
-      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.05</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>40</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
       <WoodLog>20</WoodLog>
     </costList>
     <verbs>
@@ -54,8 +54,8 @@
         <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>24</range>
-        <burstShotCount>12</burstShotCount>
-        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>9</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <soundCast>GN_Shot_PPD</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -88,13 +88,16 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
   </ThingDef>
 
   <!--===== PPSh-41(mag) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPShM</defName>
     <label>PPSh-41 (stick)</label>
-    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate.</description>
+    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
       <texPath>Things/Weapons/GN_PPShM</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -161,13 +164,16 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
   </ThingDef>
 
   <!--===== PPSh-41(drum) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPSh</defName>
     <label>PPSh-41 (drum)</label>
-    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate.</description>
+    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
       <texPath>Things/Weapons/GN_PPSh</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -200,7 +206,7 @@
         <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>24</range>
-        <burstShotCount>12</burstShotCount>
+        <burstShotCount>9</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
         <soundCast>GN_Shot_PPSh</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -234,13 +240,32 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
   </ThingDef>
 
   <!--===== PPS-43 =====-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>GN_Bullet_Tokarev_U</defName>
+    <label>7.62×25mm Tokarev uranium bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>65</speed>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPS</defName>
     <label>PPS-43</label>
-    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour.</description>
+    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the penetrating power and reliability of the PPS-43.  The questionably modified uranium bullets penetrate the shells of insectoids and mechanoids alike.  And often enough the power armour of imperial soldiers.</description>
     <graphicData>
       <texPath>Things/Weapons/GN_PPS</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -249,7 +274,7 @@
     <recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>7</Crafting>
       </skillRequirements>
     </recipeMaker>
     <statBases>
@@ -269,13 +294,13 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
+        <defaultProjectile>GN_Bullet_Tokarev_U</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>26</range>
         <burstShotCount>6</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <soundCast>GN_Shot_PPS</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
+        <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
@@ -298,6 +323,9 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
   </ThingDef>
 
 </Defs>
