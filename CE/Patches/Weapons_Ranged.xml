@@ -13,9 +13,10 @@
                 <li Class="PatchOperationReplace">
                     <xpath>
 				    /Defs/ThingDef[
-					defName = "GN_KVector_1G" or
-					defName = "GN_KVector_2G" or											
-					defName = "GN_KVector_3G"]/tools
+					defName = "GN_PPD" or
+					defName = "GN_PPShM" or	
+                    defName = "GN_PPSh" or                    											
+					defName = "GN_PPS"]/tools
                     </xpath>
                     <value>
                         <tools>
@@ -54,136 +55,171 @@
                     </value>
                 </li>
 
-                <!--===== GN_KVector_1G =====-->
+                <!-- ========== PPD-40 ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_KVector_1G</defName>
+                    <defName>GN_PPD</defName>
                     <statBases>
-                        <WorkToMake>30500</WorkToMake>
-                        <SightsEfficiency>1</SightsEfficiency>
-                        <ShotSpread>0.16</ShotSpread>
-                        <SwayFactor>0.89</SwayFactor>
-                        <Bulk>4.10</Bulk>
-                        <Mass>2.70</Mass>
-                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <Mass>3.63</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.13</ShotSpread>
+                        <SwayFactor>1.31</SwayFactor>
+                        <Bulk>9.43</Bulk>
+                        <WorkToMake>25500</WorkToMake>
                     </statBases>
                     <costList>
-                        <Steel>30</Steel>
+                        <WoodLog>10</WoodLog>
+                        <Steel>50</Steel>
                         <ComponentIndustrial>4</ComponentIndustrial>
-                        <Chemfuel>10</Chemfuel>
                     </costList>
                     <Properties>
+                        <recoilAmount>1.32</recoilAmount>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>22</range>
                         <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-                        <warmupTime>0.5</warmupTime>
-                        <range>35</range>
-                        <soundCast>GN_Shot_KRISSVector_1G</soundCast>
+                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                        <soundCast>GN_Shot_PPD</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>1.84</recoilAmount>
                     </Properties>
                     <AmmoUser>
-                        <magazineSize>30</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                        <magazineSize>71</magazineSize>
+                        <reloadTime>4.9</reloadTime>
+                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
                     </AmmoUser>
                     <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
                         <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
                         <aimedBurstShotCount>3</aimedBurstShotCount>
                     </FireModes>
                 </li>
 
-                <!--===== GN_KVector_2G =====-->
-
+                <!-- ========== PPSH-41 (stick mag) ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_KVector_2G</defName>
+                    <defName>GN_PPShM</defName>
                     <statBases>
-                        <WorkToMake>30700</WorkToMake>
-                        <SightsEfficiency>1.1</SightsEfficiency>
-                        <ShotSpread>0.13</ShotSpread>
-                        <SwayFactor>0.80</SwayFactor>
-                        <Bulk>4.20</Bulk>
-                        <Mass>3.00</Mass>
-                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <Mass>3.63</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.21</SwayFactor>
+                        <Bulk>8.43</Bulk>
+                        <WorkToMake>27000</WorkToMake>
                     </statBases>
                     <costList>
-                        <Steel>35</Steel>
+                        <WoodLog>10</WoodLog>
+                        <Steel>45</Steel>
                         <ComponentIndustrial>5</ComponentIndustrial>
-                        <Chemfuel>15</Chemfuel>
                     </costList>
                     <Properties>
+                        <recoilAmount>1.22</recoilAmount>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
-                        <burstShotCount>7</burstShotCount>
-                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-                        <warmupTime>0.5</warmupTime>
-                        <range>35</range>
-                        <soundCast>GN_Shot_KRISSVector_2G</soundCast>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>23</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <soundCast>GN_Shot_PPSh</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>1.6</recoilAmount>
                     </Properties>
                     <AmmoUser>
-                        <magazineSize>40</magazineSize>
+                        <magazineSize>35</magazineSize>
                         <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
                     </AmmoUser>
                     <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
                         <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
                         <aimedBurstShotCount>3</aimedBurstShotCount>
                     </FireModes>
                 </li>
 
-                <!--===== GN_KVector_3G =====-->
-
+                <!-- ========== PPSH-41 (drum mag) ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_KVector_3G</defName>
+                    <defName>GN_PPSh</defName>
                     <statBases>
-                        <WorkToMake>30900</WorkToMake>
-                        <SightsEfficiency>1.2</SightsEfficiency>
-                        <ShotSpread>0.13</ShotSpread>
-                        <SwayFactor>0.80</SwayFactor>
-                        <Bulk>4.20</Bulk>
-                        <Mass>3.00</Mass>
-                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <Mass>3.63</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.21</SwayFactor>
+                        <Bulk>9.43</Bulk>
+                        <WorkToMake>27500</WorkToMake>
                     </statBases>
                     <costList>
-                        <Steel>55</Steel>
-                        <Plasteel>25</Plasteel>
-                        <Chemfuel>15</Chemfuel>
-                        <ComponentIndustrial>10</ComponentIndustrial>
+                        <WoodLog>10</WoodLog>
+                        <Steel>50</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
                     </costList>
                     <Properties>
+                        <recoilAmount>1.22</recoilAmount>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_6x18mmCharged</defaultProjectile>
-                        <burstShotCount>7</burstShotCount>
-                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-                        <warmupTime>0.5</warmupTime>
-                        <range>35</range>
-                        <soundCast>GN_Shot_KRISSVector_3G</soundCast>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>23</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <soundCast>GN_Shot_PPSh</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>1.4</recoilAmount>
                     </Properties>
                     <AmmoUser>
-                        <magazineSize>60</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_6x18mmCharged</ammoSet>
+                        <magazineSize>71</magazineSize>
+                        <reloadTime>4.9</reloadTime>
+                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
                     </AmmoUser>
                     <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
                         <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
                         <aimedBurstShotCount>3</aimedBurstShotCount>
                     </FireModes>
-                    <weaponTags>
-                        <li>SpacerGun</li>
-                    </weaponTags>
+                </li>
+
+                <!-- ========== PPS-43 ========== -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>GN_PPS</defName>
+                    <statBases>
+                        <Mass>3.04</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.13</ShotSpread>
+                        <SwayFactor>1.12</SwayFactor>
+                        <Bulk>6.15</Bulk>
+                        <WorkToMake>29500</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>45</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>1.35</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>23</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                        <soundCast>GN_Shot_PPS</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>35</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
                 </li>
 
             </operations>

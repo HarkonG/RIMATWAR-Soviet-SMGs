@@ -93,10 +93,10 @@
     </weaponTags>
   </ThingDef>
 
-  <!--===== PPSh-41(mag) =====-->
+  <!--===== PPSh-41(stick mag) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPShM</defName>
-    <label>PPSh-41 (stick)</label>
+    <label>PPSh-41 (stick mag)</label>
     <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
       <texPath>Things/Weapons/GN_PPShM</texPath>
@@ -172,7 +172,7 @@
   <!--===== PPSh-41(drum) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPSh</defName>
-    <label>PPSh-41 (drum)</label>
+    <label>PPSh-41 (drum mag)</label>
     <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
       <texPath>Things/Weapons/GN_PPSh</texPath>
