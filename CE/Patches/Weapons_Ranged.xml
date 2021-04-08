@@ -222,6 +222,13 @@
                     </FireModes>
                 </li>
 
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="GN_PPS"]/description</xpath>
+                    <value>
+                        <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
+                    </value>
+                </li>
+
             </operations>
         </match>
     </Operation>
