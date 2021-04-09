@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Gun Nut - Soviet MPs</name>
+	<name>Gun Nut - Soviet SMGs</name>
 	<author>Harkon</author>
 	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=2412382876</url>
-	<packageId>Harkon.GunNut.SovietMP</packageId>
+	<packageId>Harkon.GunNut.SovietSMGs</packageId>
 	<supportedVersions>
 		<li>1.2</li>
 	</supportedVersions>
 	<description>
-	Welcome to Gun Nut!
+	Welcome to Gun Nut - Soviet SMGs!
 	</description>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>

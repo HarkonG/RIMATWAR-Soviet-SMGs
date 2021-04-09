@@ -91,9 +91,12 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
-  <!--===== PPSh-41(stick mag) =====-->
+  <!--===== PPSh-41 (stick mag) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPShM</defName>
     <label>PPSh-41 (stick mag)</label>
@@ -167,9 +170,12 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
-  <!--===== PPSh-41(drum) =====-->
+  <!--===== PPSh-41 (drum) =====-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GN_PPSh</defName>
     <label>PPSh-41 (drum mag)</label>
@@ -243,10 +249,12 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
   <!--===== PPS-43 =====-->
-
   <ThingDef ParentName="BaseBullet">
     <defName>GN_Bullet_Tokarev_U</defName>
     <label>7.62×25mm Tokarev uranium bullet</label>
@@ -326,6 +334,9 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
+    <thingCategories Inherit = "False">
+      <li>GunNut</li>
+    </thingCategories>
   </ThingDef>
 
 </Defs>
