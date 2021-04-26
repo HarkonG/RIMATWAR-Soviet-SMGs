@@ -111,7 +111,7 @@
                     </statBases>
                     <costList>
                         <WoodLog>10</WoodLog>
-                        <Steel>45</Steel>
+                        <Steel>40</Steel>
                         <ComponentIndustrial>5</ComponentIndustrial>
                     </costList>
                     <Properties>
@@ -153,7 +153,7 @@
                     </statBases>
                     <costList>
                         <WoodLog>10</WoodLog>
-                        <Steel>50</Steel>
+                        <Steel>45</Steel>
                         <ComponentIndustrial>5</ComponentIndustrial>
                     </costList>
                     <Properties>
