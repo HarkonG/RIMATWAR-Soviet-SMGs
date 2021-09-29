@@ -4,7 +4,7 @@
 
   <!--===== 7.62×25mm Tokarev =====-->
   <ThingDef ParentName="BaseBullet">
-    <defName>GN_Bullet_Tokarev</defName>
+    <defName>HRK_Bullet_Tokarev</defName>
     <label>7.62×25mm Tokarev bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
@@ -18,12 +18,12 @@
   </ThingDef>
 
   <!--===== PPD-40 =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_PPD</defName>
+  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+    <defName>HRK_PPD</defName>
     <label>PPD-40</label>
     <description>The PPD is a submachine gun originally designed in 1934 by Vasily Degtyaryov. The PPD had a conventional wooden stock, fired from an open bolt, and was capable of selective fire. It was replaced by the PPSh-41.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_PPD</texPath>
+      <texPath>Things/Weapons/HRK_PPD</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_SMG</soundInteract>
@@ -51,12 +51,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>24</range>
         <burstShotCount>9</burstShotCount>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_PPD</soundCast>
+        <soundCast>HRK_Shot_PPD</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -91,18 +91,15 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
-      <li>GunNut</li>
-    </thingCategories>
   </ThingDef>
 
   <!--===== PPSh-41 (stick mag) =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_PPShM</defName>
+  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+    <defName>HRK_PPShM</defName>
     <label>PPSh-41 (stick mag)</label>
     <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_PPShM</texPath>
+      <texPath>Things/Weapons/HRK_PPShM</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_SMG</soundInteract>
@@ -130,12 +127,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>24</range>
         <burstShotCount>6</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_PPSh</soundCast>
+        <soundCast>HRK_Shot_PPSh</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -170,18 +167,15 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
-      <li>GunNut</li>
-    </thingCategories>
   </ThingDef>
 
   <!--===== PPSh-41 (drum) =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_PPSh</defName>
+  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+    <defName>HRK_PPSh</defName>
     <label>PPSh-41 (drum mag)</label>
     <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_PPSh</texPath>
+      <texPath>Things/Weapons/HRK_PPSh</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_SMG</soundInteract>
@@ -209,12 +203,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_Tokarev</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>24</range>
         <burstShotCount>9</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_PPSh</soundCast>
+        <soundCast>HRK_Shot_PPSh</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -249,14 +243,11 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
-      <li>GunNut</li>
-    </thingCategories>
   </ThingDef>
 
   <!--===== PPS-43 =====-->
   <ThingDef ParentName="BaseBullet">
-    <defName>GN_Bullet_Tokarev_U</defName>
+    <defName>HRK_Bullet_Tokarev_U</defName>
     <label>7.62×25mm Tokarev uranium bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
@@ -270,12 +261,12 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>GN_PPS</defName>
+  <ThingDef ParentName="HRK_GunNut_BaseHumanMakeableGun">
+    <defName>HRK_PPS</defName>
     <label>PPS-43</label>
     <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the penetrating power and reliability of the PPS-43.  The questionably modified uranium bullets penetrate the shells of insectoids and mechanoids alike.  And often enough the power armour of imperial soldiers.</description>
     <graphicData>
-      <texPath>Things/Weapons/GN_PPS</texPath>
+      <texPath>Things/Weapons/HRK_PPS</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_SMG</soundInteract>
@@ -302,12 +293,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>GN_Bullet_Tokarev_U</defaultProjectile>
+        <defaultProjectile>HRK_Bullet_Tokarev_U</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>26</range>
         <burstShotCount>6</burstShotCount>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>GN_Shot_PPS</soundCast>
+        <soundCast>HRK_Shot_PPS</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -334,9 +325,6 @@
     <weaponTags>
       <li>SimpleGun</li>
     </weaponTags>
-    <thingCategories Inherit = "False">
-      <li>GunNut</li>
-    </thingCategories>
   </ThingDef>
 
 </Defs>

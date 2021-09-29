@@ -3,7 +3,7 @@
 <Defs>
 
     <SoundDef>
-        <defName>GN_Shot_PPD</defName>
+        <defName>HRK_Shot_PPD</defName>
         <context>MapOnly</context>
         <eventNames />
         <maxSimultaneous>1</maxSimultaneous>
@@ -11,7 +11,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/GN_Shot_PPD</clipFolderPath>
+                        <clipFolderPath>Weapons/HRK_Shot_PPD</clipFolderPath>
                     </li>
                 </grains>
                 <volumeRange>
@@ -28,7 +28,7 @@
     </SoundDef>
 
     <SoundDef>
-        <defName>GN_Shot_PPSh</defName>
+        <defName>HRK_Shot_PPSh</defName>
         <context>MapOnly</context>
         <eventNames />
         <maxSimultaneous>1</maxSimultaneous>
@@ -36,7 +36,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/GN_Shot_PPSh</clipFolderPath>
+                        <clipFolderPath>Weapons/HRK_Shot_PPSh</clipFolderPath>
                     </li>
                 </grains>
                 <volumeRange>
@@ -53,7 +53,7 @@
     </SoundDef>
 
     <SoundDef>
-        <defName>GN_Shot_PPS</defName>
+        <defName>HRK_Shot_PPS</defName>
         <context>MapOnly</context>
         <eventNames />
         <maxSimultaneous>1</maxSimultaneous>
@@ -61,7 +61,7 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/GN_Shot_PPS</clipFolderPath>
+                        <clipFolderPath>Weapons/HRK_Shot_PPS</clipFolderPath>
                     </li>
                 </grains>
                 <volumeRange>

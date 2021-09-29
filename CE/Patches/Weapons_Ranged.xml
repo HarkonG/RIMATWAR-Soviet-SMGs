@@ -13,10 +13,10 @@
                 <li Class="PatchOperationReplace">
                     <xpath>
 				    /Defs/ThingDef[
-					defName = "GN_PPD" or
-					defName = "GN_PPShM" or	
-                    defName = "GN_PPSh" or                    											
-					defName = "GN_PPS"]/tools
+					defName = "HRK_PPD" or
+					defName = "HRK_PPShM" or	
+                    defName = "HRK_PPSh" or                    											
+					defName = "HRK_PPS"]/tools
                     </xpath>
                     <value>
                         <tools>
@@ -57,7 +57,7 @@
 
                 <!-- ========== PPD-40 ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_PPD</defName>
+                    <defName>HRK_PPD</defName>
                     <statBases>
                         <Mass>3.63</Mass>
                         <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -81,7 +81,7 @@
                         <range>22</range>
                         <burstShotCount>6</burstShotCount>
                         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <soundCast>GN_Shot_PPD</soundCast>
+                        <soundCast>HRK_Shot_PPD</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
@@ -99,7 +99,7 @@
 
                 <!-- ========== PPSH-41 (stick mag) ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_PPShM</defName>
+                    <defName>HRK_PPShM</defName>
                     <statBases>
                         <Mass>3.63</Mass>
                         <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -123,7 +123,7 @@
                         <range>23</range>
                         <burstShotCount>6</burstShotCount>
                         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                        <soundCast>GN_Shot_PPSh</soundCast>
+                        <soundCast>HRK_Shot_PPSh</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
@@ -141,7 +141,7 @@
 
                 <!-- ========== PPSH-41 (drum mag) ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_PPSh</defName>
+                    <defName>HRK_PPSh</defName>
                     <statBases>
                         <Mass>3.63</Mass>
                         <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -165,7 +165,7 @@
                         <range>23</range>
                         <burstShotCount>6</burstShotCount>
                         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                        <soundCast>GN_Shot_PPSh</soundCast>
+                        <soundCast>HRK_Shot_PPSh</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
@@ -183,7 +183,7 @@
 
                 <!-- ========== PPS-43 ========== -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>GN_PPS</defName>
+                    <defName>HRK_PPS</defName>
                     <statBases>
                         <Mass>3.04</Mass>
                         <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -206,7 +206,7 @@
                         <range>23</range>
                         <burstShotCount>6</burstShotCount>
                         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <soundCast>GN_Shot_PPS</soundCast>
+                        <soundCast>HRK_Shot_PPS</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
@@ -223,7 +223,7 @@
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="GN_PPS"]/description</xpath>
+                    <xpath>Defs/ThingDef[defName="HRK_PPS"]/description</xpath>
                     <value>
                         <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
                     </value>
