@@ -10,8 +10,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/HRK_Shot_PPD</clipFolderPath>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/HRK_Shot_PPD</clipPath>
                     </li>
                 </grains>
                 <volumeRange>
@@ -35,8 +35,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/HRK_Shot_PPSh</clipFolderPath>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/HRK_Shot_PPSh</clipPath>
                     </li>
                 </grains>
                 <volumeRange>
@@ -60,8 +60,8 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Folder">
-                        <clipFolderPath>Weapons/HRK_Shot_PPS</clipFolderPath>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/HRK_Shot_PPS</clipPath>
                     </li>
                 </grains>
                 <volumeRange>
