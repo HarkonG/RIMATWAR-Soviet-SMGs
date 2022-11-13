@@ -1,235 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Combat Extended</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-
-                <!--===== TOOLS FOR THE TOOL GOD =====-->
-                <li Class="PatchOperationReplace">
-                    <xpath>
+            <!--===== TOOLS FOR THE TOOL GOD =====-->
+            <li Class="PatchOperationReplace">
+                <xpath>
 				    /Defs/ThingDef[
 					defName = "HRK_PPD" or
 					defName = "HRK_PPShM" or	
                     defName = "HRK_PPSh" or                    											
 					defName = "HRK_PPS"]/tools
-                    </xpath>
-                    <value>
-                        <tools>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>stock</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <chanceFactor>1.5</chanceFactor>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>barrel</label>
-                                <capacities>
-                                    <li>Blunt</li>
-                                </capacities>
-                                <power>5</power>
-                                <cooldownTime>2.02</cooldownTime>
-                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
-                            </li>
-                            <li Class="CombatExtended.ToolCE">
-                                <label>muzzle</label>
-                                <capacities>
-                                    <li>Poke</li>
-                                </capacities>
-                                <power>8</power>
-                                <cooldownTime>1.55</cooldownTime>
-                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
-                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
-                            </li>
-                        </tools>
-                    </value>
-                </li>
+                </xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
 
-                <!-- ========== PPD-40 ========== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_PPD</defName>
-                    <statBases>
-                        <Mass>3.63</Mass>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                        <SightsEfficiency>1.00</SightsEfficiency>
-                        <ShotSpread>0.13</ShotSpread>
-                        <SwayFactor>1.31</SwayFactor>
-                        <Bulk>9.43</Bulk>
-                        <WorkToMake>25500</WorkToMake>
-                    </statBases>
-                    <costList>
-                        <WoodLog>10</WoodLog>
-                        <Steel>50</Steel>
-                        <ComponentIndustrial>4</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <recoilAmount>1.32</recoilAmount>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>true</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
-                        <warmupTime>0.6</warmupTime>
-                        <range>22</range>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <soundCast>HRK_Shot_PPD</soundCast>
-                        <soundCastTail>GunTail_Light</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>71</magazineSize>
-                        <reloadTime>4.9</reloadTime>
-                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiUseBurstMode>FALSE</aiUseBurstMode>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                </li>
+            <!-- ========== PPD-40 ========== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_PPD</defName>
+                <statBases>
+                    <Mass>3.63</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.13</ShotSpread>
+                    <SwayFactor>1.31</SwayFactor>
+                    <Bulk>9.43</Bulk>
+                    <WorkToMake>25500</WorkToMake>
+                </statBases>
+                <costList>
+                    <WoodLog>10</WoodLog>
+                    <Steel>50</Steel>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <recoilAmount>1.32</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>22</range>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <soundCast>HRK_Shot_PPD</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>71</magazineSize>
+                    <reloadTime>4.9</reloadTime>
+                    <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+            </li>
 
-                <!-- ========== PPSH-41 (stick mag) ========== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_PPShM</defName>
-                    <statBases>
-                        <Mass>3.63</Mass>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                        <SightsEfficiency>1.00</SightsEfficiency>
-                        <ShotSpread>0.12</ShotSpread>
-                        <SwayFactor>1.21</SwayFactor>
-                        <Bulk>8.43</Bulk>
-                        <WorkToMake>27000</WorkToMake>
-                    </statBases>
-                    <costList>
-                        <WoodLog>10</WoodLog>
-                        <Steel>40</Steel>
-                        <ComponentIndustrial>5</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <recoilAmount>1.22</recoilAmount>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>true</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
-                        <warmupTime>0.6</warmupTime>
-                        <range>23</range>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                        <soundCast>HRK_Shot_PPSh</soundCast>
-                        <soundCastTail>GunTail_Light</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>35</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiUseBurstMode>FALSE</aiUseBurstMode>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                </li>
+            <!-- ========== PPSH-41 (stick mag) ========== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_PPShM</defName>
+                <statBases>
+                    <Mass>3.63</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.12</ShotSpread>
+                    <SwayFactor>1.21</SwayFactor>
+                    <Bulk>8.43</Bulk>
+                    <WorkToMake>27000</WorkToMake>
+                </statBases>
+                <costList>
+                    <WoodLog>10</WoodLog>
+                    <Steel>40</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <recoilAmount>1.22</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>23</range>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <soundCast>HRK_Shot_PPSh</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>35</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+            </li>
 
-                <!-- ========== PPSH-41 (drum mag) ========== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_PPSh</defName>
-                    <statBases>
-                        <Mass>3.63</Mass>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                        <SightsEfficiency>1.00</SightsEfficiency>
-                        <ShotSpread>0.12</ShotSpread>
-                        <SwayFactor>1.21</SwayFactor>
-                        <Bulk>9.43</Bulk>
-                        <WorkToMake>27500</WorkToMake>
-                    </statBases>
-                    <costList>
-                        <WoodLog>10</WoodLog>
-                        <Steel>45</Steel>
-                        <ComponentIndustrial>5</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <recoilAmount>1.22</recoilAmount>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>true</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
-                        <warmupTime>0.6</warmupTime>
-                        <range>23</range>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                        <soundCast>HRK_Shot_PPSh</soundCast>
-                        <soundCastTail>GunTail_Light</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>71</magazineSize>
-                        <reloadTime>4.9</reloadTime>
-                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiUseBurstMode>FALSE</aiUseBurstMode>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                </li>
+            <!-- ========== PPSH-41 (drum mag) ========== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_PPSh</defName>
+                <statBases>
+                    <Mass>3.63</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.12</ShotSpread>
+                    <SwayFactor>1.21</SwayFactor>
+                    <Bulk>9.43</Bulk>
+                    <WorkToMake>27500</WorkToMake>
+                </statBases>
+                <costList>
+                    <WoodLog>10</WoodLog>
+                    <Steel>45</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <recoilAmount>1.22</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>23</range>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <soundCast>HRK_Shot_PPSh</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>71</magazineSize>
+                    <reloadTime>4.9</reloadTime>
+                    <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+            </li>
 
-                <!-- ========== PPS-43 ========== -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>HRK_PPS</defName>
-                    <statBases>
-                        <Mass>3.04</Mass>
-                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
-                        <SightsEfficiency>1.00</SightsEfficiency>
-                        <ShotSpread>0.13</ShotSpread>
-                        <SwayFactor>1.12</SwayFactor>
-                        <Bulk>6.15</Bulk>
-                        <WorkToMake>29500</WorkToMake>
-                    </statBases>
-                    <costList>
-                        <Steel>45</Steel>
-                        <ComponentIndustrial>5</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <recoilAmount>1.35</recoilAmount>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>true</hasStandardCommand>
-                        <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
-                        <warmupTime>0.6</warmupTime>
-                        <range>23</range>
-                        <burstShotCount>6</burstShotCount>
-                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-                        <soundCast>HRK_Shot_PPS</soundCast>
-                        <soundCastTail>GunTail_Light</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>35</magazineSize>
-                        <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiUseBurstMode>FALSE</aiUseBurstMode>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aimedBurstShotCount>3</aimedBurstShotCount>
-                    </FireModes>
-                </li>
+            <!-- ========== PPS-43 ========== -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>HRK_PPS</defName>
+                <statBases>
+                    <Mass>3.04</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.13</ShotSpread>
+                    <SwayFactor>1.12</SwayFactor>
+                    <Bulk>6.15</Bulk>
+                    <WorkToMake>29500</WorkToMake>
+                </statBases>
+                <costList>
+                    <Steel>45</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                </costList>
+                <Properties>
+                    <recoilAmount>1.35</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>23</range>
+                    <burstShotCount>6</burstShotCount>
+                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <soundCast>HRK_Shot_PPS</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>35</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>Snapshot</aiAimMode>
+                    <aimedBurstShotCount>3</aimedBurstShotCount>
+                </FireModes>
+            </li>
 
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="HRK_PPS"]/description</xpath>
-                    <value>
-                        <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
-                    </value>
-                </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HRK_PPS"]/description</xpath>
+                <value>
+                    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
+                </value>
+            </li>
 
-            </operations>
-        </match>
+        </operations>
     </Operation>
 </Patch>
