@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[HRK] RIM AT WAR - WW2 Japanese Weapons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="HRK_PPD" or defName="HRK_PPShM" or defName="HRK_PPSh" or defName="HRK_PPS"]/recipeMaker/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisite>HRK_Research_SimpleAutomaticDesigns</researchPrerequisite>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
