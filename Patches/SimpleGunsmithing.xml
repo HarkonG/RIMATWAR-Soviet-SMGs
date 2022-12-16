@@ -10,7 +10,7 @@
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="HRK_PPD" or defName="HRK_PPShM" or defName="HRK_PPSh" or defName="HRK_PPS"]/recipeMaker/researchPrerequisite</xpath>
                     <value>
-                        <researchPrerequisite>HRK_Research_SimpleAutomaticDesigns</researchPrerequisite>
+                        <researchPrerequisite>HRK_Research_SimpleAssaultRifles</researchPrerequisite>
                     </value>
                 </li>
             </operations>
