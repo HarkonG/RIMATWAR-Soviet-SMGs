@@ -54,12 +54,12 @@
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>HRK_PPD</defName>
                 <statBases>
-                    <Mass>3.63</Mass>
+                    <Mass>3.20</Mass>
                     <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
                     <SightsEfficiency>1.00</SightsEfficiency>
-                    <ShotSpread>0.13</ShotSpread>
-                    <SwayFactor>1.31</SwayFactor>
-                    <Bulk>9.43</Bulk>
+                    <ShotSpread>0.12</ShotSpread>
+                    <SwayFactor>1.11</SwayFactor>
+                    <Bulk>8.88</Bulk>
                     <WorkToMake>25500</WorkToMake>
                 </statBases>
                 <costList>
@@ -68,13 +68,13 @@
                     <ComponentIndustrial>4</ComponentIndustrial>
                 </costList>
                 <Properties>
-                    <recoilAmount>1.32</recoilAmount>
+                    <recoilAmount>1.33</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
                     <warmupTime>0.6</warmupTime>
                     <range>22</range>
-                    <burstShotCount>6</burstShotCount>
+                    <burstShotCount>5</burstShotCount>
                     <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                     <soundCast>HRK_Shot_PPD</soundCast>
                     <soundCastTail>GunTail_Light</soundCastTail>
@@ -110,14 +110,14 @@
                     <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
-                    <recoilAmount>1.22</recoilAmount>
+                    <recoilAmount>1.25</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
                     <warmupTime>0.6</warmupTime>
-                    <range>23</range>
-                    <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <range>22</range>
+                    <burstShotCount>5</burstShotCount>
+                    <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
                     <soundCast>HRK_Shot_PPSh</soundCast>
                     <soundCastTail>GunTail_Light</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale>
@@ -152,14 +152,14 @@
                     <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
-                    <recoilAmount>1.22</recoilAmount>
+                    <recoilAmount>1.25</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
                     <warmupTime>0.6</warmupTime>
-                    <range>23</range>
-                    <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <range>22</range>
+                    <burstShotCount>5</burstShotCount>
+                    <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
                     <soundCast>HRK_Shot_PPSh</soundCast>
                     <soundCastTail>GunTail_Light</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale>
@@ -180,7 +180,7 @@
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>HRK_PPS</defName>
                 <statBases>
-                    <Mass>3.04</Mass>
+                    <Mass>3.00</Mass>
                     <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
                     <SightsEfficiency>1.00</SightsEfficiency>
                     <ShotSpread>0.13</ShotSpread>
@@ -193,14 +193,14 @@
                     <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
-                    <recoilAmount>1.35</recoilAmount>
+                    <recoilAmount>1.39</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
                     <warmupTime>0.6</warmupTime>
-                    <range>23</range>
-                    <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                    <range>25</range>
+                    <burstShotCount>5</burstShotCount>
+                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
                     <soundCast>HRK_Shot_PPS</soundCast>
                     <soundCastTail>GunTail_Light</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale>
@@ -215,13 +215,6 @@
                     <aiAimMode>Snapshot</aiAimMode>
                     <aimedBurstShotCount>3</aimedBurstShotCount>
                 </FireModes>
-            </li>
-
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="HRK_PPS"]/description</xpath>
-                <value>
-                    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
-                </value>
             </li>
 
         </operations>

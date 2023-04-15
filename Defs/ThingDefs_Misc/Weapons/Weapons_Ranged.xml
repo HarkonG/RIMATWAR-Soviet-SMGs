@@ -2,31 +2,32 @@
 
 <Defs>
 
-  <!--===== 7.62×25mm Tokarev =====-->
+  <!--===== PPD-40 bullet =====-->
   <ThingDef ParentName="BaseBullet">
-    <defName>HRK_Bullet_Tokarev</defName>
-    <label>7.62×25mm Tokarev bullet</label>
+    <defName>HRK_Bullet_PPD</defName>
+    <label>PPD-40 bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <speed>65</speed>
+      <damageAmountBase>4</damageAmountBase>
+      <speed>55</speed>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
     </projectile>
   </ThingDef>
 
   <!--===== PPD-40 =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="HRK_RimAtWar_SovietUnion_BaseHumanMakeableGun">
     <defName>HRK_PPD</defName>
     <label>PPD-40</label>
     <description>The PPD is a submachine gun originally designed in 1934 by Vasily Degtyaryov. The PPD had a conventional wooden stock, fired from an open bolt, and was capable of selective fire. It was replaced by the PPSh-41.</description>
     <graphicData>
-      <texPath>Things/Weapons/HRK_PPD</texPath>
+      <texPath>Things/Item/Equipment/WeaponRanged/HRK_PPD</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>Interact_SMG</soundInteract>
+    <soundInteract>HRK_Interact_PPSh</soundInteract>
     <recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
@@ -34,28 +35,28 @@
       </skillRequirements>
     </recipeMaker>
     <statBases>
-      <WorkToMake>11000</WorkToMake>
-      <Mass>3.5</Mass>
-      <AccuracyTouch>0.80</AccuracyTouch>
-      <AccuracyShort>0.55</AccuracyShort>
-      <AccuracyMedium>0.25</AccuracyMedium>
-      <AccuracyLong>0.05</AccuracyLong>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>3.2</Mass>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.30</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>30</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <WoodLog>20</WoodLog>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <WoodLog>10</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
-        <range>24</range>
-        <burstShotCount>9</burstShotCount>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <defaultProjectile>HRK_Bullet_PPD</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>20</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
         <soundCast>HRK_Shot_PPD</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -90,215 +91,262 @@
     </tools>
     <weaponTags>
       <li>SimpleGun</li>
+      <li>ShortShots</li>
     </weaponTags>
+    <weaponClasses>
+      <li>ShortShots</li>
+      <li>RangedLight</li>
+    </weaponClasses>
   </ThingDef>
 
-  <!--===== PPSh-41 (stick mag) =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>HRK_PPShM</defName>
-    <label>PPSh-41 (stick mag)</label>
-    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
-    <graphicData>
-      <texPath>Things/Weapons/HRK_PPShM</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_SMG</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <statBases>
-      <WorkToMake>13000</WorkToMake>
-      <Mass>2.5</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.35</AccuracyMedium>
-      <AccuracyLong>0.15</AccuracyLong>
-      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>30</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-      <WoodLog>20</WoodLog>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
-        <range>24</range>
-        <burstShotCount>6</burstShotCount>
-        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>HRK_Shot_PPSh</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>grip</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-    <weaponTags>
-      <li>SimpleGun</li>
-    </weaponTags>
-  </ThingDef>
-
-  <!--===== PPSh-41 (drum) =====-->
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>HRK_PPSh</defName>
-    <label>PPSh-41 (drum mag)</label>
-    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
-    <graphicData>
-      <texPath>Things/Weapons/HRK_PPSh</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_SMG</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <statBases>
-      <WorkToMake>13000</WorkToMake>
-      <Mass>3.5</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.35</AccuracyMedium>
-      <AccuracyLong>0.15</AccuracyLong>
-      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <Steel>40</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
-      <WoodLog>20</WoodLog>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>HRK_Bullet_Tokarev</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
-        <range>24</range>
-        <burstShotCount>9</burstShotCount>
-        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>HRK_Shot_PPSh</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>grip</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
-    <weaponTags>
-      <li>SimpleGun</li>
-    </weaponTags>
-  </ThingDef>
-
-  <!--===== PPS-43 =====-->
+  <!--===== PPSh-41 bullet =====-->
   <ThingDef ParentName="BaseBullet">
-    <defName>HRK_Bullet_Tokarev_U</defName>
-    <label>7.62×25mm Tokarev uranium bullet</label>
+    <defName>HRK_Bullet_PPShM</defName>
+    <label>PPSh-41 bullet</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <speed>65</speed>
-      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>55</speed>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>HRK_PPS</defName>
-    <label>PPS-43</label>
-    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the penetrating power and reliability of the PPS-43.  The questionably modified uranium bullets penetrate the shells of insectoids and mechanoids alike.  And often enough the power armour of imperial soldiers.</description>
+  <!--===== PPSh-41 =====-->
+  <ThingDef ParentName="HRK_RimAtWar_SovietUnion_BaseHumanMakeableGun">
+    <defName>HRK_PPShM</defName>
+    <label>PPSh-41</label>
+    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
     <graphicData>
-      <texPath>Things/Weapons/HRK_PPS</texPath>
+      <texPath>Things/Item/Equipment/WeaponRanged/HRK_PPShM</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>Interact_SMG</soundInteract>
+    <soundInteract>HRK_Interact_PPSh</soundInteract>
     <recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
       <skillRequirements>
-        <Crafting>7</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
     <statBases>
-      <WorkToMake>11000</WorkToMake>
-      <Mass>2.5</Mass>
-      <AccuracyTouch>0.90</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.45</AccuracyMedium>
-      <AccuracyLong>0.20</AccuracyLong>
-      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>3.2</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.30</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>55</Steel>
+      <Steel>45</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HRK_Bullet_PPShM</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>21</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>HRK_Shot_PPSh</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>ShortShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>ShortShots</li>
+      <li>RangedLight</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!--===== PPSh-41 (drum) bullet =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>HRK_Bullet_PPSh</defName>
+    <label>PPSh-41 (drum) bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <speed>55</speed>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <!--===== PPSh-41 (drum) =====-->
+  <ThingDef ParentName="HRK_RimAtWar_SovietUnion_BaseHumanMakeableGun">
+    <defName>HRK_PPSh</defName>
+    <label>PPSh-41 (drum)</label>
+    <description>The PPSh-41 is a Soviet submachine gun designed by Georgy Shpagin as a cheap, reliable, and simplified alternative to the PPD-40. A common Russian nickname for the weapon is "papasha", meaning "daddy", and it was sometimes called the "burp gun" because of its high fire rate. \n\nDeveloped and used in a long-forgotten war against a ferocious invader, the Papasha is still used today by colonists and militias for its reliability and firepower.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HRK_PPSh</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>HRK_Interact_PPSh</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>3.2</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.30</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HRK_Bullet_PPSh</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>20</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>HRK_Shot_PPSh</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>ShortShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>ShortShots</li>
+      <li>RangedLight</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!--===== PPS-43 =====-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>HRK_Bullet_PPS</defName>
+    <label>PPS-43 bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>55</speed>
+      <armorPenetrationBase>0.16</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="HRK_RimAtWar_SovietUnion_BaseHumanMakeableGun">
+    <defName>HRK_PPS</defName>
+    <label>PPS-43</label>
+    <description>The PPS was created in response to a Red Army requirement for a compact and lightweight weapon with similar accuracy and projectile energy to the Soviet PPSh-41 submachine gun widely deployed at the time, with reduced rate of fire, produced at lower material cost and requiring fewer man-hours, particularly skilled labour. \n\nToday, the weapon is still widely used by partisans, rebels and anti-imperial terrorists all over the Rimworlds, who appreciate the reliability of the PPS-43.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HRK_PPS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>HRK_Interact_PPSh</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>3.2</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>HRK_Bullet_Tokarev_U</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
-        <range>26</range>
-        <burstShotCount>6</burstShotCount>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>HRK_Shot_PPS</soundCast>
+        <defaultProjectile>HRK_Bullet_PPS</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>22</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>HRK_Shot_PPSh</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -324,7 +372,12 @@
     </tools>
     <weaponTags>
       <li>SimpleGun</li>
+      <li>ShortShots</li>
     </weaponTags>
+    <weaponClasses>
+      <li>ShortShots</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
   </ThingDef>
 
 </Defs>

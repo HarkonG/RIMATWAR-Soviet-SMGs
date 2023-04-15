@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <!--WeaponsRanged-->
+    <ThingCategoryDef>
+        <defName>HRK_Category_RimAtWarWeaponsRanged</defName>
+        <label>Rim At War</label>
+        <parent>WeaponsRanged</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>HRK_Category_RimAtWarWeaponsRanged_SovietUnion</defName>
+        <label>SovietUnion</label>
+        <parent>HRK_Category_RimAtWarWeaponsRanged</parent>
+    </ThingCategoryDef>    
+
+</Defs>

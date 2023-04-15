@@ -3,9 +3,27 @@
 <Defs>
 
     <SoundDef>
+        <defName>HRK_Interact_PPSh</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/HRK_Interact_PPSh</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+
+    <SoundDef>
         <defName>HRK_Shot_PPD</defName>
         <context>MapOnly</context>
-        <eventNames />
+        <eventNames/>
         <maxSimultaneous>1</maxSimultaneous>
         <subSounds>
             <li>
@@ -14,14 +32,6 @@
                         <clipPath>Weapons/HRK_Shot_PPD</clipPath>
                     </li>
                 </grains>
-                <volumeRange>
-                    <min>34.2941</min>
-                    <max>40.2941</max>
-                </volumeRange>
-                <pitchRange>
-                    <min>1.191765</min>
-                    <max>1.231435</max>
-                </pitchRange>
                 <sustainLoop>False</sustainLoop>
             </li>
         </subSounds>
@@ -30,7 +40,7 @@
     <SoundDef>
         <defName>HRK_Shot_PPSh</defName>
         <context>MapOnly</context>
-        <eventNames />
+        <eventNames/>
         <maxSimultaneous>1</maxSimultaneous>
         <subSounds>
             <li>
@@ -39,14 +49,6 @@
                         <clipPath>Weapons/HRK_Shot_PPSh</clipPath>
                     </li>
                 </grains>
-                <volumeRange>
-                    <min>34.2941</min>
-                    <max>40.2941</max>
-                </volumeRange>
-                <pitchRange>
-                    <min>1.191765</min>
-                    <max>1.231435</max>
-                </pitchRange>
                 <sustainLoop>False</sustainLoop>
             </li>
         </subSounds>
@@ -55,7 +57,7 @@
     <SoundDef>
         <defName>HRK_Shot_PPS</defName>
         <context>MapOnly</context>
-        <eventNames />
+        <eventNames/>
         <maxSimultaneous>1</maxSimultaneous>
         <subSounds>
             <li>
@@ -64,14 +66,6 @@
                         <clipPath>Weapons/HRK_Shot_PPS</clipPath>
                     </li>
                 </grains>
-                <volumeRange>
-                    <min>34.2941</min>
-                    <max>40.2941</max>
-                </volumeRange>
-                <pitchRange>
-                    <min>1.191765</min>
-                    <max>1.231435</max>
-                </pitchRange>
                 <sustainLoop>False</sustainLoop>
             </li>
         </subSounds>
