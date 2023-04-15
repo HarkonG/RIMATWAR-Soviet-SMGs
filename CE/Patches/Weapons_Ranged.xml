@@ -60,12 +60,12 @@
                     <ShotSpread>0.12</ShotSpread>
                     <SwayFactor>1.11</SwayFactor>
                     <Bulk>8.88</Bulk>
-                    <WorkToMake>25500</WorkToMake>
+                    <WorkToMake>13500</WorkToMake>
                 </statBases>
                 <costList>
                     <WoodLog>10</WoodLog>
-                    <Steel>50</Steel>
-                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <Steel>45</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
                     <recoilAmount>1.33</recoilAmount>
@@ -102,11 +102,11 @@
                     <ShotSpread>0.12</ShotSpread>
                     <SwayFactor>1.21</SwayFactor>
                     <Bulk>8.43</Bulk>
-                    <WorkToMake>27000</WorkToMake>
+                    <WorkToMake>13500</WorkToMake>
                 </statBases>
                 <costList>
-                    <WoodLog>10</WoodLog>
-                    <Steel>40</Steel>
+                    <WoodLog>5</WoodLog>
+                    <Steel>50</Steel>
                     <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
@@ -144,11 +144,11 @@
                     <ShotSpread>0.12</ShotSpread>
                     <SwayFactor>1.21</SwayFactor>
                     <Bulk>9.43</Bulk>
-                    <WorkToMake>27500</WorkToMake>
+                    <WorkToMake>14000</WorkToMake>
                 </statBases>
                 <costList>
-                    <WoodLog>10</WoodLog>
-                    <Steel>45</Steel>
+                    <WoodLog>5</WoodLog>
+                    <Steel>55</Steel>
                     <ComponentIndustrial>5</ComponentIndustrial>
                 </costList>
                 <Properties>
@@ -186,7 +186,7 @@
                     <ShotSpread>0.13</ShotSpread>
                     <SwayFactor>1.12</SwayFactor>
                     <Bulk>6.15</Bulk>
-                    <WorkToMake>29500</WorkToMake>
+                    <WorkToMake>14500</WorkToMake>
                 </statBases>
                 <costList>
                     <Steel>45</Steel>
